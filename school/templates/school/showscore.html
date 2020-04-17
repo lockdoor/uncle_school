@@ -1,0 +1,30 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px; margin-bottom: 50px">
+
+    <center>
+        <h1>This is score page</h1>
+
+
+
+        <table style="width: 100%;">
+            <tr>
+                <th>วิชา</th>
+                <th>ชื่อนักเรียน</th>
+                <th>คะแนนสอบ</th>
+            </tr>
+            {% for n in score %}
+            <tr>
+                <td>{{n.subject}}</td>
+                <td>{{n.student_name}}</td>
+                <td>{{n.score}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </center>
+
+</div>
+
+{% endblock %}
